@@ -15,6 +15,11 @@ library(ggplot2)
 
 mydat <- read_xlsx("data/birddata_tidy.xlsx")
 
+# megdat <- read_xlsx("data/Master_species_observation_list.xlsx")
+# megbird <- megdat[megdat$survey_event == "BBS_RSBP" && megdat$taxon_group == "Bird",]  
+# table(megbird$survey_notes)
+# table(mydat$occasion)
+
 # 2 Analysis ####
 
 # Unique common names
@@ -64,5 +69,5 @@ mydat |>
     y = element_blank(),
     title = 'HAU Breeding Birds Survey 2022-2023'
   ) +
-  theme_minimal(base_size = 10) 
+  theme_minimal(base_size = 8) 
 
