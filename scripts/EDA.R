@@ -47,17 +47,17 @@ length(unique(sort(mydat$transect)))
 # How many transect "walks" have there been?
 length(table(mydat$year, mydat$transect, mydat$occasion))
 
-# How many transect "walks" have there been?
+# How many transect "walks" have there been per year?
 for(i in 2022:2024){
   print(length(table(mydat$transect[mydat$year==i], mydat$occasion[mydat$year==i])))
 }
 
-par(mar = c(5, 10, 4, 2) + 0.1)
-barplot(sort(table(mydat$bird_spp)),
-        horiz=T,
-        las = 2,
-        cex.names = .5)
-par(mar(c(5, 4, 4, 2) + 0.1))
+# par(mar = c(5, 10, 4, 2) + 0.1)
+# barplot(sort(table(mydat$bird_spp)),
+#         horiz=T,
+#         las = 2,
+#         cex.names = .5)
+# par(mar(c(5, 4, 4, 2) + 0.1))
 
 mydat |>
   count(bird_spp) |>
